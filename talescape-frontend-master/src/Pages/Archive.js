@@ -102,7 +102,7 @@ const Archive = () => {
                 <Modal.Footer>
                   {/* Added a remove button for debugging purposes */}
                   {/* Uncomment the remove button if needed */}
-                  {/* <Button variant="danger" onClick={() => handleRemoveBook(selectedBook.id)}>Remove</Button> */}
+                  <Button variant="danger" onClick={() => handleRemoveBook(selectedBook.id)}>Remove</Button>
                   <Button variant="secondary" onClick={() => setShowModal(false)}>Close</Button>
                 </Modal.Footer>
               </Modal>

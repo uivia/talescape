@@ -46,7 +46,7 @@ const BookList = () => {
         const isBookAlreadySaved = savedBooks.some(book => book.id === selectedBook.id);
         if (!isBookAlreadySaved) {
           localStorage.setItem('savedBooks', JSON.stringify([...savedBooks, selectedBook]));
-          setSuccessMessage(`Book "${selectedBook.title}" has been archived successfully.`);
+          setSuccessMessage(`Book "${selectedBook.title}" has been saved successfully.`);
           setShowSuccessModal(true);
         }
       }

@@ -78,7 +78,7 @@ const Saved = () => {
               {savedBooks.map((book) => (
                 <Col md={3} key={book.id} className="mb-4">
                 <Card onClick={() => handleBookClick(book)} style={{cursor: 'pointer' }}>
-                  <Card.Img variant="top" src={book.imageUrl} alt={book.title} style={{ height: '300px', objectFit: 'fluid' }} />
+                  <Card.Img variant="top" src={book.imageUrl} alt={book.title} style={{ height: '300px', objectFit: 'cover' }} />
                   <Card.Body>
                     <Card.Title>{book.title}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{book.author}</Card.Subtitle>
@@ -99,7 +99,7 @@ const Saved = () => {
                 <Modal.Footer>
                   {/* Added a remove button for debugging purposes */}
                   {/* Uncomment the remove button if needed */}
-                  {/* <Button variant="danger" onClick={() => handleRemoveBook(selectedBook.id)}>Remove</Button> */}
+                  <Button variant="danger" onClick={() => handleRemoveBook(selectedBook.id)}>Remove</Button>
                   <Button variant="secondary" onClick={() => setShowModal(false)}>Close</Button>
                 </Modal.Footer>
               </Modal>
